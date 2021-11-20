@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Converter.MainPage" BackgroundColor="White">
+    <StackLayout VerticalOptions="CenterAndExpand">
+        <Label Text="Converter" HorizontalOptions="CenterAndExpand" BackgroundColor="Blue" VerticalOptions="Start"/>
+        <Entry BackgroundColor="Aquamarine" x:Name="Ndata_entry" Placeholder="Enter amount"/>
+        <StackLayout BackgroundColor="ForestGreen">
+            <Picker Title="Convert from" SelectedIndexChanged="Picker_SelectedIndexChanged_ConvertFrom">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Kilometers</x:String>
+                        <x:String>Meters</x:String>
+                        <x:String>Miles</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </StackLayout>
+		<StackLayout>
+		  <StackLayout>
+
+		  </StackLayout>
+		</StackLayout>
+        <StackLayout BackgroundColor="Red">
+            <Picker Title="Convert to" SelectedIndexChanged="Picker_SelectedIndexChanged_ConvertTo">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Kilometers</x:String>
+                        <x:String>Meters</x:String>
+                        <x:String>Miles</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </StackLayout>
+            <Button BackgroundColor="GreenYellow" x:Name="Nconvert_button" Text="Convert" Clicked="Nconvert_button_Clicked_Convert"/>
+    </StackLayout>
+</ContentPage>
